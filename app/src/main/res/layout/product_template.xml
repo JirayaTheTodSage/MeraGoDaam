@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layoutOnClick"
+    android:layout_width="match_parent"
+    android:layout_height="170dp"
+    android:orientation="horizontal"
+    android:padding="5dp"
+    android:weightSum="100">
+
+    <ImageView
+        android:id="@+id/product_img"
+        android:layout_width="150dp"
+
+        android:layout_height="150dp"
+        android:background="#F8F6F6" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="8dp"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:text="Main Title"
+            android:textSize="24sp" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/star_icon_1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/star_icon" />
+
+                <ImageView
+                    android:id="@+id/star_icon_2"
+                    android:layout_width="27dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/star_icon" />
+
+                <ImageView
+                    android:id="@+id/star_icon_3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/star_icon" />
+
+                <ImageView
+                    android:id="@+id/star_icon_4"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/star_icon" />
+
+                <ImageView
+                    android:id="@+id/star_icon_5"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/star_icon" />
+
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/star_icon_holo_1"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/star_icon_holo" />
+
+                <ImageView
+                    android:id="@+id/star_icon_holo_2"
+                    android:layout_width="27dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/star_icon_holo" />
+
+                <ImageView
+                    android:id="@+id/star_icon_holo_3"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/star_icon_holo" />
+
+                <ImageView
+                    android:id="@+id/star_icon_holo_4"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/star_icon_holo" />
+
+                <ImageView
+                    android:id="@+id/star_icon_holo_5"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/star_icon_holo" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:gravity="center"
+                    android:hint="5889554" />
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹"
+                android:textColor="#590B0B"
+
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/product_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹0000000"
+                android:textColor="#590B0B"
+                android:textSize="18sp" />
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="50dp"
+                    android:layout_height="wrap_content"
+                    android:text="150000"
+                    android:textColor="#9E9C9C" />
+
+                <LinearLayout
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:layout_centerInParent="true"
+                    android:background="#9E9C9C"
+
+                    android:gravity="center" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+
+            android:textSize="12sp" />
+
+
+    </LinearLayout>
+
+</LinearLayout>

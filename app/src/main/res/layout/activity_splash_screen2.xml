@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SplashScreen"
+    android:background="#9E9C9C">
+    <androidx.cardview.widget.CardView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:cardCornerRadius="150dp"
+        android:id="@+id/cd"
+        android:layout_centerInParent="true"
+        app:cardElevation="20dp"
+        android:padding="10dp">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:padding="20dp"
+            android:background="#161720"
+            android:id="@+id/img_s"
+
+
+            android:src="@drawable/shopping_cart"/>
+
+
+
+    </androidx.cardview.widget.CardView>
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_below="@+id/cd"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MeraGoDaam"
+            android:textColor="#302A2A"
+            android:id="@+id/name_s"
+            android:textSize="25dp"
+
+
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
