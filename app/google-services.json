@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "504328143005",
+    "project_id": "meragodaam-9f852",
+    "storage_bucket": "meragodaam-9f852.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:504328143005:android:1f674f26ba790baece1474",
+        "android_client_info": {
+          "package_name": "com.example.meragodaam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "504328143005-6osao770a5sjr2ij3bo9i6jpaoue1q4j.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDEF3ObXqtnryP2dvCFlYhfPyEMZ3wfgmo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "504328143005-6osao770a5sjr2ij3bo9i6jpaoue1q4j.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
