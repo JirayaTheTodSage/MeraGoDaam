@@ -28,6 +28,7 @@
             android:layout_height="wrap_content"
             android:padding="5dp"
             android:text="Main Title"
+            android:textColor="@color/white"
             android:textSize="24sp" />
 
         <RelativeLayout
@@ -154,8 +155,8 @@
                     android:layout_width="50dp"
                     android:layout_height="1dp"
                     android:layout_centerInParent="true"
-                    android:background="#9E9C9C"
 
+                    android:background="#9E9C9C"
                     android:gravity="center" />
             </RelativeLayout>
         </LinearLayout>

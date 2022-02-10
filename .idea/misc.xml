@@ -4,8 +4,11 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/hp/AndroidStudioProjects/MeraGoDaam/app/src/main/res/drawable/boarder.xml" value="0.2703125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/MeraGoDaam/app/src/main/res/drawable/gredient_background.xml" value="0.2703125" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/MeraGoDaam/app/src/main/res/drawable/main_gredient_background.xml" value="0.2703125" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/MeraGoDaam/app/src/main/res/layout/activity_add_product.xml" value="0.264" />
-        <entry key="..\:/Users/hp/AndroidStudioProjects/MeraGoDaam/app/src/main/res/layout/activity_log_in.xml" value="0.4" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/MeraGoDaam/app/src/main/res/layout/activity_get_otp.xml" value="0.2222222222222222" />
+        <entry key="..\:/Users/hp/AndroidStudioProjects/MeraGoDaam/app/src/main/res/layout/activity_log_in.xml" value="0.264" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/MeraGoDaam/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/MeraGoDaam/app/src/main/res/layout/activity_product_show.xml" value="0.264" />
         <entry key="..\:/Users/hp/AndroidStudioProjects/MeraGoDaam/app/src/main/res/layout/activity_splash_screen2.xml" value="0.2" />

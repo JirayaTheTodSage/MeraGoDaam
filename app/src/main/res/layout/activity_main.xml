@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/main_gredient_background"
     tools:context=".MainActivity">
 
    <!-- <androidx.cardview.widget.CardView
@@ -41,6 +42,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:backgroundTint="#00494040"
 
         android:layout_margin="5dp"
         app:cardCornerRadius="5dp"
@@ -59,7 +61,7 @@
     android:backgroundTint="@color/black"
     android:layout_alignParentBottom="true"
     android:layout_alignParentRight="true"
-    app:iconTint="#ED1A1A"
+    app:iconTint="#e67e22"
 
     app:iconSize="30dp"
     android:layout_marginBottom="16dp"
