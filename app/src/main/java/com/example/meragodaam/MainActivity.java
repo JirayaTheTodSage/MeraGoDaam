@@ -1,33 +1,31 @@
 package com.example.meragodaam;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.Manifest;
 import android.content.Intent;
 import android.content.pm.PackageManager;
-import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.os.Bundle;
 import android.util.Base64;
 import android.view.View;
-import android.widget.Button;
+
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton;
-import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 0 ;
+    private static final int MY_PERMISSIONS_REQUEST_READ_EXTERNAL_STORAGE = 0;
     RecyclerView recyclerView;
-    ArrayList<ProductModel> arrayList = new ArrayList<>();
+    ArrayList< ProductModel > arrayList = new ArrayList<>();
     String description = "lol What is Lorem Ipsum  Lorem Ipsum is simply dummy text of the printing and typesett Lorem Ipsum has been the industry's standard dummy text ever since the 1500s when an unknown printer took a galley of type and scrambled it to make a type specimen book.It has survived not only five centuries, but also the leap into ele remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.Why do we use itIt is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years,ometimes by accident, sometimes on purpose injected humour and the like) ";
     byte[] b;
+
     @RequiresApi(api = Build.VERSION_CODES.M)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         //Button btnload = findViewById(R.id.btnLoad);
         ExtendedFloatingActionButton btnAdd = findViewById(R.id.btnAdd);
-        ArrayList<ProductModel> arrayList = new ArrayList<>();
-        ArrayList<ProductAddModel> arrAdd = new ArrayList<>();
+        ArrayList< ProductModel > arrayList = new ArrayList<>();
+        ArrayList< ProductAddModel > arrAdd = new ArrayList<>();
         MyDataBaseHelper db = new MyDataBaseHelper(this);
 
         /*btnload.setOnClickListener(new View.OnClickListener() {
@@ -62,34 +60,32 @@ public class MainActivity extends AppCompatActivity {
 //        arrayList.add(new ProductModel(2, R.drawable.mobi10, "Apple", description, "124000"));
 
 
-
         arrAdd = db.fetchProduct();
         System.out.println("fetched arrayList size: " + arrAdd.size());
 
 
         for (int i = 0; i < arrAdd.size(); i++) {
             Bitmap bitImage = null;
-            System.out.println("getting IMage "+arrAdd.get(i).img);
-            String image=arrAdd.get(i).img;
-            if(!image.equalsIgnoreCase("")) {
+            System.out.println("getting IMage " + arrAdd.get(i).img);
+            String image = arrAdd.get(i).img;
+            if (!image.equalsIgnoreCase("")) {
+
                 b = Base64.decode(image, Base64.DEFAULT);
                 Bitmap bitmap = BitmapFactory.decodeByteArray(b, 0, b.length);
-
                 bitImage = bitmap;
-                System.out.println("model"+bitmap);
+                System.out.println("model" + bitmap);
 
-            }else{
+            } else {
                 System.out.println("did not get any encoded image");
             }
 
-            ProductModel model = new ProductModel(arrAdd.get(i).rating
+            ProductModel model = new ProductModel(image,
+                    arrAdd.get(i).rating
                     , bitImage
                     , arrAdd.get(i).name
                     , arrAdd.get(i).description
                     , arrAdd.get(i).price);
             //image decode function is calling
-
-
 
 
             arrayList.add(model);
@@ -103,9 +99,9 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(i);
             }
         });
-        
+
         //permission for storage
-        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)!= PackageManager.PERMISSION_GRANTED) {
+        if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
 
             // Should we show an explanation?
             if (shouldShowRequestPermissionRationale(
@@ -124,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
-    
+
 
 }
 

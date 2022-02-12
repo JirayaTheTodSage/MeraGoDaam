@@ -4,14 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="170dp"
     android:orientation="horizontal"
-    android:padding="5dp"
+    android:padding="3dp"
     android:weightSum="100">
 
     <ImageView
         android:id="@+id/product_img"
-        android:layout_width="150dp"
+        android:layout_width="130dp"
+        android:scaleType="centerCrop"
+        android:layout_gravity="center"
 
-        android:layout_height="150dp"
+        android:layout_height="130dp"
         android:background="#F8F6F6" />
 
     <LinearLayout

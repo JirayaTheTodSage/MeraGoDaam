@@ -2,7 +2,7 @@ package com.example.meragodaam;
 
 public class ProductAddModel {
     int rating;
-    String name,description,price;
+    String name, description, price;
     String img;
 
     public ProductAddModel(int rating, String img, String name, String description, String price) {

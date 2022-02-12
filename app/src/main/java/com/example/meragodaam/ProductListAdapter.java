@@ -4,12 +4,7 @@ import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.net.Uri;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.support.v4.media.session.IMediaControllerCallback;
-import android.util.Base64;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,23 +12,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 
-public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.MyViewHolder> {
+public class ProductListAdapter extends RecyclerView.Adapter< ProductListAdapter.MyViewHolder > {
     Context context;
-    ArrayList<ProductModel> arrayList;
+    ArrayList< ProductModel > arrayList;
     String TAG = ProductListAdapter.class.getSimpleName();
 
-    public ProductListAdapter(Context context, ArrayList<ProductModel> arr) {
+    public ProductListAdapter(Context context, ArrayList< ProductModel > arr) {
         this.context = context;
         arrayList = arr;
     }
@@ -49,8 +41,12 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.title.setText(arrayList.get(position).name);
+        String name = arrayList.get(position).name;
         holder.description.setText(arrayList.get(position).description);
+        String des = arrayList.get(position).description;
         holder.price.setText(arrayList.get(position).price);
+        String price = arrayList.get(position).price;
+        Bitmap image = arrayList.get(position).image;
 
         System.out.println("set image " + arrayList.get(position).image);
 
@@ -120,13 +116,21 @@ public class ProductListAdapter extends RecyclerView.Adapter<ProductListAdapter.
         holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ProductModel productModel = arrayList.get(position);
                 //System.out.println("position " + position);
                 //System.out.println("position arrSize" + arrayList.size());
                 //String data = Integer.toString(position);
                 Intent i = new Intent(context, ProductShow.class);
                 Bundle b = new Bundle();
                 b.putInt("key", position);
-               // b.putSerializable("k", arrayList);
+                b.putString("name",name);
+                b.putString("des",des);
+                b.putString("price",price);
+                //b.putString("imageS",arrayList.get(position).imgS);
+                //i.putExtra("key",productModel);
+               // b.putParcelableArrayList("key",arrayList);
+               // b.putSerializable("key",arrayList);
+
                 i.putExtras(b);
                 context.startActivity(i);
             }

@@ -7,8 +7,6 @@ import android.database.CursorWindow;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 
@@ -22,20 +20,21 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
     private static final String KEY_IMAGE = "IMAGE";
     private static final String KEY_RATING = "Rating";
     private static final String KEY_DESCRIPTION = "DESCRIPTION";
+
     public MyDataBaseHelper(Context context) {
-        super(context,DATABASE_NAME,null,DATABASE_VERSION );
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("CREATE TABLE "+TABLE_NAME+" ( "+KEY_PRODUCT_ID+ " Integer Primary key AutoIncrement, "+
-                                                    KEY_PRODUCT_NAME+ " Text, " +
-                                                    KEY_IMAGE+ " Text, " +
-                                                    KEY_PRICE+ " Float, "+
-                                                    KEY_DESCRIPTION + " Text, "+
-                                                    KEY_RATING+ " Integer )"
-                    );
+        db.execSQL("CREATE TABLE " + TABLE_NAME + " ( " + KEY_PRODUCT_ID + " Integer Primary key AutoIncrement, " +
+                KEY_PRODUCT_NAME + " Text, " +
+                KEY_IMAGE + " Text, " +
+                KEY_PRICE + " Float, " +
+                KEY_DESCRIPTION + " Text, " +
+                KEY_RATING + " Integer )"
+        );
 
     }
 
@@ -46,18 +45,18 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
         onCreate(db);
 
     }
-    public boolean addProduct(String name,String image,float price,String description,int rating)
-    {
+
+    public boolean addProduct(String name, String image, float price, String description, int rating) {
         SQLiteDatabase database = this.getWritableDatabase();
         ContentValues values = new ContentValues();
 
 
-        values.put(KEY_PRODUCT_NAME,name);
-        values.put(KEY_IMAGE,image);
-        values.put(KEY_PRICE,price);
-        values.put(KEY_DESCRIPTION,description);
-        values.put(KEY_RATING,rating);
-        Long longResult = database.insert(TABLE_NAME,null,values);
+        values.put(KEY_PRODUCT_NAME, name);
+        values.put(KEY_IMAGE, image);
+        values.put(KEY_PRICE, price);
+        values.put(KEY_DESCRIPTION, description);
+        values.put(KEY_RATING, rating);
+        Long longResult = database.insert(TABLE_NAME, null, values);
 
         database.close();
 
@@ -68,12 +67,11 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
         }
 
     }
-    public ArrayList<ProductAddModel> fetchProduct(){
+
+    public ArrayList< ProductAddModel > fetchProduct() {
         SQLiteDatabase db = this.getWritableDatabase();
-        Cursor cursor = db.rawQuery("SELECT * FROM "+TABLE_NAME,null);
-       ArrayList<ProductAddModel> arrayList = new ArrayList<>();
-
-
+        Cursor cursor = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
+        ArrayList< ProductAddModel > arrayList = new ArrayList<>();
 
 
         try {
@@ -85,7 +83,7 @@ public class MyDataBaseHelper extends SQLiteOpenHelper {
             e.printStackTrace();
         }
 
-        while (cursor.moveToNext()){
+        while (cursor.moveToNext()) {
             ProductAddModel model = new ProductAddModel(cursor.getInt(0),
                     cursor.getString(2),
                     cursor.getString(1),

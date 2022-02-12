@@ -7,37 +7,37 @@
     android:background="@drawable/main_gredient_background"
     tools:context=".MainActivity">
 
-   <!-- <androidx.cardview.widget.CardView
-        android:id="@+id/card1"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:layout_margin="5dp"
-        android:backgroundTint="#0F1012"
-        app:cardCornerRadius="5dp"
-        app:cardElevation="5dp">
+    <!-- <androidx.cardview.widget.CardView
+         android:id="@+id/card1"
+         android:layout_width="match_parent"
+         android:layout_height="?attr/actionBarSize"
+         android:layout_margin="5dp"
+         android:backgroundTint="#0F1012"
+         app:cardCornerRadius="5dp"
+         app:cardElevation="5dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="horizontal">
+         <LinearLayout
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_gravity="center"
+             android:orientation="horizontal">
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Load new activity"
-                android:visibility="gone" />
+             <Button
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Load new activity"
+                 android:visibility="gone" />
 
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="MeraGoDaam"
-                android:textColor="@color/white"
-                android:textSize="24sp"/>
-        </LinearLayout>
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="MeraGoDaam"
+                 android:textColor="@color/white"
+                 android:textSize="24sp"/>
+         </LinearLayout>
 
-    </androidx.cardview.widget.CardView>-->
+     </androidx.cardview.widget.CardView>-->
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -53,18 +53,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </androidx.cardview.widget.CardView>
-<com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-    android:layout_width="56dp"
-    android:layout_height="56dp"
-    android:id="@+id/btnAdd"
-    app:icon="@drawable/ic_baseline_add_24"
-    android:backgroundTint="@color/black"
-    android:layout_alignParentBottom="true"
-    android:layout_alignParentRight="true"
-    app:iconTint="#e67e22"
 
-    app:iconSize="30dp"
-    android:layout_marginBottom="16dp"
-    android:layout_marginRight="16dp"/>
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:id="@+id/btnAdd"
+        app:icon="@drawable/ic_baseline_add_24"
+        android:backgroundTint="@color/black"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        app:iconTint="#e67e22"
+
+        app:iconSize="30dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginRight="16dp" />
 
 </RelativeLayout>

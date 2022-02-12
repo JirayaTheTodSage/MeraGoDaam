@@ -1,8 +1,5 @@
 package com.example.meragodaam;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
@@ -17,9 +14,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
+
 import java.io.ByteArrayOutputStream;
-import java.io.File;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.io.InputStream;
@@ -34,7 +32,7 @@ public class AddProduct extends AppCompatActivity {
     int rating = 0;
     String name, des, img, str;
     float price;
-    EditText edt_name, edt_des, edt_price,put_rating;
+    EditText edt_name, edt_des, edt_price, put_rating;
     InputStream iStream;
     byte[] inputImage;
 
@@ -75,9 +73,7 @@ public class AddProduct extends AppCompatActivity {
                 str = String.valueOf(iGallery.getData());
 
                 rating = Integer.valueOf(put_rating.getText().toString());
-                System.out.println("rating"+ rating);
-
-
+                System.out.println("rating" + rating);
 
 
                 //get image encoded
@@ -87,11 +83,11 @@ public class AddProduct extends AppCompatActivity {
                 realImage.getBitmap().compress(Bitmap.CompressFormat.JPEG, 50, baos);
                 byte[] b = baos.toByteArray();
                 str = Base64.encodeToString(b, Base64.DEFAULT);
-                System.out.println("entered image encoded "+str);
+                System.out.println("entered image encoded " + str);
                 System.out.println(" uri String " + str);
 
 
-                boolean isSuccessFul = db.addProduct(name, str, price, des,rating);
+                boolean isSuccessFul = db.addProduct(name, str, price, des, rating);
 
                 if (isSuccessFul) {
                     Toast.makeText(AddProduct.this, "Data Inserted Successfully", Toast.LENGTH_SHORT).show();

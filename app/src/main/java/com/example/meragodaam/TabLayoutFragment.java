@@ -1,13 +1,12 @@
 package com.example.meragodaam;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-import androidx.viewpager.widget.ViewPager;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.fragment.app.Fragment;
+import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 
@@ -23,7 +22,6 @@ public class TabLayoutFragment extends Fragment {
     }
 
 
-
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,22 +32,16 @@ public class TabLayoutFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-     View view = inflater.inflate(R.layout.activity_tab_layout_load, container, false);
+        View view = inflater.inflate(R.layout.activity_tab_layout_load, container, false);
 
 
-     tabLayout = view.findViewById(R.id.tabLayout);
-     viewPager = view.findViewById(R.id.viewPager);
-     ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
-     viewPager.setAdapter(adapter);
+        tabLayout = view.findViewById(R.id.tabLayout);
+        viewPager = view.findViewById(R.id.viewPager);
+        ViewPagerAdapter adapter = new ViewPagerAdapter(getActivity().getSupportFragmentManager());
+        viewPager.setAdapter(adapter);
         tabLayout.setupWithViewPager(viewPager);
 
 
-
-
-
-
-
-
-     return view;
+        return view;
     }
 }

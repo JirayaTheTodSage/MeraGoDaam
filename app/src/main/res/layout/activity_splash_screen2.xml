@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".SplashScreen"
     android:background="@drawable/gredient_background">
+
     <androidx.cardview.widget.CardView
         android:layout_width="100dp"
         android:layout_height="100dp"
@@ -15,6 +16,7 @@
         android:layout_centerHorizontal="true"
         app:cardElevation="20dp"
         android:padding="10dp">
+
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="100dp"
@@ -23,11 +25,11 @@
             android:id="@+id/img_s"
 
 
-            android:src="@drawable/shopping_cart"/>
-
+            android:src="@drawable/shopping_cart" />
 
 
     </androidx.cardview.widget.CardView>
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_centerInParent="true"
